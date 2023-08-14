@@ -27,7 +27,7 @@ Poznámka: V pc učebně je funkční jen Visual Studio 2019, verze 2022 nefungu
 	- první hodina,
 	- přestávka na kávu 10-15 minut,
 	- druhá hodina.
-- 11:00 Obědová přestávka 60 minut
+- 11:00 Obědová přestávka (60 minut).
 - 12:00 Druhý blog výuky:
 	- třetí hodina,
 	- přestávka na kávu 10-15 minut,
