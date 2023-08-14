@@ -3,6 +3,7 @@
 ## Přihlašovací údaje do PC v učebnách
 
 login: .\student
+
 heslo: student
 
 Poznámka: znak \ je vedle levé klávesy shift.
@@ -10,6 +11,7 @@ Poznámka: znak \ je vedle levé klávesy shift.
 ## Přihlašovací údaje k WIFI
 
 wifi: Programatorska_pripravka
+
 heslo: 2023programing
 
 ## Vývojová prostředí
