@@ -36,7 +36,7 @@ Poznámka: V pc učebně je funkční jen Visual Studio 2019, verze 2022 nefungu
 
 ## Proměnná a její adresa
 
-Operátor ```&```  vraci adresu promenne, například &x.
+Operátor ```&```  vraci adresu promenne, například ```&x```.
 
 Proměnná je pojmenovaná hodnota v paměti.
 
