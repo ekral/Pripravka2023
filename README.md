@@ -55,7 +55,24 @@ double x2 = 1 / 3.0;
 double x3 = 1.0 / 3;
 double x4 = 1.0 / 3.0;
 ```
+## Základní vstupně výstupní operace
 
+Pro výpis typu ```int``` používáme formátovací značku **%d**.
+
+```c
+int x = 0;
+printf("%d", x);
+```
+
+Pro výpis typu ```double``` používáme formátovací značku **%lf**.
+
+```c
+double x = 0.0;
+printf("%lf", x);
+```
+
+Příkazy ```printf``` a ```scanf_s``` jsou deklarované v hlavičkovém souboru **stdio.h**.
+ 
 Poznámka: V jazyce C se používá desetinná tečka, protože vychází z angličtiny.
 
 ---
