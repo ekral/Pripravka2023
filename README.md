@@ -17,7 +17,7 @@ heslo: 2023programing
 ## Vývojová prostředí
 
 - Erik Král: Visual Studio 2022
-kolega: dříve Eclipse, Codelite nebo Clion
+- Tomáš Dulík: dříve Eclipse, Codelite nebo Clion
 
 Poznámka: V pc učebně je funkční jen Visual Studio 2019, verze 2022 nefunguje.
 
