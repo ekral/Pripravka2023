@@ -2,13 +2,15 @@
 
 ## Přihlašovací údaje do PC v učebnách
 
-login: .\student
+login: *.\student*
 
-heslo: student
+heslo: *student*
 
 Poznámka: znak \ je vedle levé klávesy shift.
 
 ## Přihlašovací údaje k WIFI
+
+Název wifi sítě: Programatorska_pripravka
 
 wifi: Programatorska_pripravka
 
