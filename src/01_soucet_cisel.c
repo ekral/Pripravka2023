@@ -15,8 +15,6 @@ int main()
 	printf("Enter y value:");
 	scanf_s("%d", &y ); // adresa promenne y
 	
-	// Spocitat BMI
-	// budeme potrebovat operaci deleni s desetinnou carkou
 	int z = x + y;
 
 	printf("\n");
