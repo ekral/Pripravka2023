@@ -44,7 +44,7 @@ Proměnná je pojmenovaná hodnota v paměti.
 ## Základní typy a aritmetické operace
 
 - Typ ```int``` reprezenuje celé číslo se znaménkem, v jazyce C má minimálně dva bajty.
-- Typ ```double``` reprezentuje číslo s desetinnou čárkou (které typicky ukládá s binární čárkou) a se znaménkem. Typycky zabíra 8 bajtů.
+- Typ ```double``` reprezentuje číslo s desetinnou čárkou (spíše plovoucí řádková čárka, anglicky floating-point, typicky s binárním exponentem) a se znaménkem. Typycky zabíra 8 bajtů.
   
 Výraz 1 / 3 vrací hodnotu 0 protože oba operandy jsou celá čísla, operace dělení je potom v jazyce C celočíselná.
 Naproti tomu výrazy 1 / 3.0, 1.0 / 3 nebo 1.0 / 3.0 vrací správný výsledek, protože alespoň jeden z operandů je číslo s desetinnou čárkou.
