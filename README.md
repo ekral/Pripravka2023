@@ -2,9 +2,9 @@
 
 ## Přihlašovací údaje do PC v učebnách
 
-login: *.\student*
+login: **.\student**
 
-heslo: *student*
+heslo: **student**
 
 Poznámka: znak \ je vedle levé klávesy shift.
 
