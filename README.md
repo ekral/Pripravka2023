@@ -88,6 +88,8 @@ Příkazy ```printf``` a ```scanf_s``` jsou deklarované v hlavičkovém souboru
 Poznámka: V jazyce C se používá desetinná tečka, protože vychází z angličtiny.
 
 ---
+Domácí úkoly
+
 1. Zadejte hodnoty tří celých čísel a vypište jejich průměr.
 
 ---
