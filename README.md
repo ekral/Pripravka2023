@@ -10,11 +10,9 @@ Poznámka: znak \ je vedle levé klávesy shift.
 
 ## Přihlašovací údaje k WIFI
 
-Název wifi sítě: Programatorska_pripravka
+Název wifi sítě: **Programatorska_pripravka**
 
-wifi: Programatorska_pripravka
-
-heslo: 2023programing
+heslo: **2023programing**
 
 ## Vývojová prostředí
 
