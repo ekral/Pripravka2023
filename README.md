@@ -56,6 +56,8 @@ double x3 = 1.0 / 3;
 double x4 = 1.0 / 3.0;
 ```
 
+Poznámka: V jazyce C se používá desetinná tečka, protože vychází z angličtiny.
+
 ---
 Poznámky
 
