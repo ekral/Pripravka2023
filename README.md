@@ -41,6 +41,18 @@ Operátor & vraci adresu promenne, například &x.
 
 Proměnná je pojmenovaná hodnota v paměti.
 
+## Typ čísla s desetinnou čárkou a aritmetické operace
+
+Výraz 1 / 3 vrací hodnotu 0 protože oba operandy jsou celá čísla, operace dělení je potom v jazyce C celočíselná.
+Naproti tomu výrazy 1 / 3.0, 1.0 / 3 nebo 1.0 / 3.0 vrací správný výsledek, protože alespoň jeden z operandů je číslo s desetinnou čárkou.
+
+```c
+double x1 = 1 / 3;
+double x2 = 1 / 3.0;
+double x3 = 1.0 / 3;
+double x4 = 1.0 / 3.0;
+```
+
 ---
 Poznámky
 
