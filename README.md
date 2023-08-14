@@ -23,16 +23,16 @@ Poznámka: V pc učebně je funkční jen Visual Studio 2019, verze 2022 nefungu
 
 ## Organizace kurzu
 
-- 9:00 První blog výuky:
+- 9:00: První blog výuky:
 	- 1. hodina,
 	- přestávka na kávu 10-15 minut,
 	- 2. hodina.
-- 11:00 Obědová přestávka 60 minut
-- 12:00 Druhý blog výuky:
+- 11:00: Obědová přestávka 60 minut
+- 12:00: Druhý blog výuky:
 	- 3. hodina,
 	- přestávka na kávu 10-15 minut,
 	- 4. hodina.
-- 14:00 Konec.
+- 14:00: Konec.
 
 ## Proměnná a její adresa
 
