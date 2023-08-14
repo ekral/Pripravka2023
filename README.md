@@ -71,6 +71,18 @@ double x = 0.0;
 printf("%lf", x);
 ```
 
+Pro vstup z terminálu **bez ověření správnosti** vstupu můžeme použít funkci ```scanf_s```, která má jako parametr adresu proměnné do které ukládá převedenou hodnotu z řetězce dle formátovací značky.
+
+```c
+int x = 0;
+scanf_s("%d", &x);
+```
+
+```c
+double x = 0.0;
+scanf_s("%lf", &x);
+```
+
 Příkazy ```printf``` a ```scanf_s``` jsou deklarované v hlavičkovém souboru **stdio.h**.
  
 Poznámka: V jazyce C se používá desetinná tečka, protože vychází z angličtiny.
