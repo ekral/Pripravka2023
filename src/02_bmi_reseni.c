@@ -15,8 +15,8 @@ int main()
 	printf("Zadej hmotnost v kilogramech: ");
 	scanf_s("%d", &weightInKilograms ); // adresa promenne weightInKilograms
 	
-	// Spocitat BMI
-
+	// Vypocet bmi
+	
 	double heightInMeters = heightInCentimeters / 100.0; // operace deleni s plovouci carkou
 	double bmi = weightInKilograms / (heightInMeters * heightInMeters);
 
