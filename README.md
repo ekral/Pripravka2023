@@ -16,8 +16,8 @@ heslo: **2023programing**
 
 ## Vývojová prostředí
 
-- [Erik Král](https://fai.utb.cz/contacts/ing-et-ing-erik-kral-ph-d/): Visual Studio Community
-- [Tomáš Dulík](https://fai.utb.cz/contacts/ing-tomas-dulik-ph-d/): dříve Eclipse, Codelite nebo Clion
+- [Erik Král](https://fai.utb.cz/contacts/ing-et-ing-erik-kral-ph-d/) používá Visual Studio Community.
+- [Tomáš Dulík](https://fai.utb.cz/contacts/ing-tomas-dulik-ph-d/) používá Eclipse, Codelite nebo Clion.
 
 Poznámka: V pc učebně je funkční jen Visual Studio 2019, verze 2022 nefunguje.
 
