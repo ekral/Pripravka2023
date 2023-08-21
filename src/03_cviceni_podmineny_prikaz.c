@@ -73,10 +73,21 @@ int main()
 	{
 		printf("neni idealni vaha");
 	}
+	else
+	{
+		printf("idealni vaha");
+	}
 
 	// pomoci ifu a else
 	// asi budeme muset pouzit printf dvakrat
-
+	if (bmi > 16.5)
+	{
+		printf("neni idealni vaha");
+	}
+	else if (bmi > 30 )
+	{
+		printf("neni idealni vaha");
+	}
 
 	return 0;
 }
