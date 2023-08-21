@@ -2,7 +2,7 @@
 
 ## Obsah prvního týdne programátorské přípravky
 
-github.com/tdulik/pripravka2023](https://github.com/tdulik/pripravka2023)
+[github.com/tdulik/pripravka2023](https://github.com/tdulik/pripravka2023)
 
 ## Přihlašovací údaje do PC v učebnách
 
