@@ -2,7 +2,8 @@
 
 ## Obsah prvního týdne programátorské přípravky
 
-[github.com/tdulik/pripravka2023](https://github.com/tdulik/pripravka2023)
+- Obsah prvního týdne programátorské přípravky: [github.com/tdulik/pripravka2023](https://github.com/tdulik/pripravka2023)
+- Online reference pro jazyky C a C++: [cppreference]([Obsah prvního týdne programátorské přípravky](https://en.cppreference.com/w/).
 
 ## Přihlašovací údaje do PC v učebnách
 
