@@ -6,6 +6,6 @@ int main()
 
     double fahrenheit = 78;
     double celsius = (5 * (fahrenheit - 32)) / 9;
-
-	  return 0;
+    
+    return 0;
 }
