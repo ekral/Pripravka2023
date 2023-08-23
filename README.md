@@ -21,9 +21,9 @@ S pomocí ukazatele můžeme pracovat s objektem jen s pomocí jeho adresy a dan
 
 V následujícíh bodech je použitý pseudokód pro lepší pochopení typu ukazatel, adresního operátoru (operátoru reference) a operátoru indirekce (operátoru dereference).
 
-- Typ ```adresa_objektu```, kde uvádíme typ objektu, naříklad  ```adresa_objektu_int```. 
-- Operátor ```adresa_objektu(název proměnné)```.
-- Operátor ```hodnota_na_adrese(adresa)```.
+- Typ ```typ_adresa_objektu```, kde uvádíme typ objektu, naříklad  ```typ_adresa_objektu_int```. 
+- Operátor ```operator_adresa_objektu(název proměnné)```.
+- Operátor ```operator_hodnota_na_adrese(adresa)```.
 
 Poznámka: v předcházejících bodech je uveden pseudokód pro typ ukazatele a 
 ## Obsah prvního týdne programátorské přípravky
