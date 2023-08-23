@@ -7,12 +7,12 @@ TODO
 
 ## Ukazatele
 
-- Proměnná je **pojmenovaná hodnota v paměti**.
-- **Hodnota** má přiřazený **typ**.
+- **Hodnota** v paměti má přiřazený **typ** a **adresu**.
+- **Pojmenovaná hodnota** v paměti je **proměnná**.
 - Princip **adresy** na kterou můžu zapisovat do paměti.
 - Typ proměnné ```adresa_hodnoty```, kde uvádíme typ hodnoty, naříklad  ```adresa_hodnoty_int```. 
 - Operátor ```adresa_promenne(název proměnné)```.
-- Operátor ```hodnota_na_adrese(adressa)```.
+- Operátor ```hodnota_na_adrese(adresa)```.
   
 ## Obsah prvního týdne programátorské přípravky
 
