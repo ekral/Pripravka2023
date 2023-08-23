@@ -9,7 +9,7 @@ TODO
 
 - **Hodnota** v paměti má přiřazený **typ** a **adresu**.
 - **Pojmenovaná hodnota** v paměti je **proměnná**.
-- S hodnotou v paměti ale můžu pracovat i pomocí její adresy.
+- S hodnotou v paměti ale můžu pracovat i **s pomocí její adresy**.
 - Princip **adresy** na kterou můžu zapisovat do paměti.
 - Typ proměnné ```adresa_hodnoty```, kde uvádíme typ hodnoty, naříklad  ```adresa_hodnoty_int```. 
 - Operátor ```adresa_promenne(název proměnné)```.
