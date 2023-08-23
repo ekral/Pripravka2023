@@ -1,14 +1,16 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdbool.h>
 
 #define MAX_LEN 256
 
 int main()
 {
-    char pole[MAX_LEN];
-
-    if(!gets_s(pole, MAX_LEN))
+    
+    // I kdyz je gets_s soucasti standardu, tak ne vsechny prekladace jej podporuji
+    // Je lepsi pouzit funkci fgets.
+    // Nikdy nepouzivat funkci gets, ktera neni bezpecna, protoze nema omezeni poctu znaku.
+    
+    if(!fgets(pole, MAX_LEN, stdin))
     {
         puts("Selhani");
         return 0;
@@ -31,7 +33,11 @@ int main()
         {
             pocetDvojic++;
             i++;
+            // Posuneme se na dalsi znak bez testovani na '\0'
+            // Protoze dalsi znak je roven aktualnimu,
+            // ktery jsme jiz otestovali ze neni '\0'
         }
+        
         i++;
     }
     
