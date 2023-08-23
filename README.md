@@ -7,16 +7,21 @@ TODO
 
 ## Ukazatele
 
-### Proměnné a typy
+### Proměnné, typy a ukazatel
+
+Následující definice vychází z knihy [A Tour of C++)](https://www.stroustrup.com/tour3.html).
+
 - **Typ** definuje množinu možných hodnot a množinu operací pro objekt.
-- **Hodnota** je množina bitů interpretovaná podle typu.
-- **Objekt** je paměť, která na dané **adrese** uchovává hodnotu konkrétního typ.
+- **Hodnota** je množina bitů interpretovaná podle daného typu.
+- **Objekt** je paměť, která na dané **adrese** uchovává hodnotu daného typ.
 - Proměnná je **Pojmenovaný objekt**.
 - S objektem v paměti můžu pracovat i jen **s pomocí jeho adresy**, nemusím být pojmenovaný.
-- Typ  ```adresa_objektu```, kde uvádíme typ objektu, naříklad  ```adresa_objektu_int```. 
-- Operátor ```adresa_promenne(název proměnné)```.
+- Ukazatel je proměnná která uchovává adresu objektu daného typu.
+- Typ ```adresa_objektu```, kde uvádíme typ objektu, naříklad  ```adresa_objektu_int```. 
+- Operátor ```adresa_objektu(název proměnné)```.
 - Operátor ```hodnota_na_adrese(adresa)```.
-  
+
+Poznámka: v předcházejících bodech je uveden pseudokód pro typ ukazatele a 
 ## Obsah prvního týdne programátorské přípravky
 
 - Obsah prvního týdne programátorské přípravky: [github.com/tdulik/pripravka2023](https://github.com/tdulik/pripravka2023)
