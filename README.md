@@ -7,7 +7,7 @@ TODO
 
 ## Ukazatele
 
-- **Hodnota** v paměti má přiřazený **typ** a **adresu**.
+- **Hodnota** je místo v paměti s přiřazeným **typem** a **adresou**.
 - **Pojmenovaná hodnota** v paměti je **proměnná**.
 - S hodnotou v paměti můžu pracovat i jen **s pomocí její adresy**, nemusím být pojmenovaná.
 - Princip **adresy** na kterou můžu zapisovat do paměti.
