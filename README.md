@@ -21,13 +21,12 @@ S pomocí ukazatele můžeme pracovat s objektem jen s pomocí jeho adresy a dan
 
 ### Příklad
 
-V následujícíh bodech je použitý pseudokód pro lepší pochopení typu ukazatel, adresního operátoru (operátoru reference) a operátoru indirekce (operátoru dereference).
+V následujícíh příkladu je použitý pseudokód nahrazující operátory textem s cílem aby byl kód lépe pochopitelný. Dále je uvedený příklad ve validním kódu jazyka C a nakonec je uvedena tabulka pro srovnání.
 
 - Typ ```typ_adresa_objektu```, kde uvádíme daný typ objektu, naříklad  ```typ_adresa_int_objektu```. 
 - Operátor ```adresa_promenne(název proměnné)``` vrací adresu proměnné.
 - Operátor ```hodnota_na_adrese(adresa)``` vrací hodnotu objektu na dané adrese.
 
-Poznámka: v předcházejících bodech je uveden pseudokód pro typ ukazatele.
 
 **Příklad v pseudokódu pro vysvětlení typů a operátorů**
 
