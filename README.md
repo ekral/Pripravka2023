@@ -15,7 +15,7 @@ Následující definice vychází z knihy [A Tour of C++](https://www.stroustrup
 - **Hodnota** je množina bitů interpretovaná podle daného typu.
 - **Objekt** je paměť, která na dané **adrese** uchovává hodnotu daného typu.
 - Proměnná je **pojmenovaný objekt**.
-- S objektem v paměti můžu pracovat i jen **s pomocí jeho adresy**, nemusím být pojmenovaný.
+- S objektem v paměti můžu v jazce C pracovat i jen **s pomocí jeho adresy**, nemusí být pojmenovaný.
 - Ukazatel je proměnná která uchovává adresu objektu daného typu.
 - Typ ```adresa_objektu```, kde uvádíme typ objektu, naříklad  ```adresa_objektu_int```. 
 - Operátor ```adresa_objektu(název proměnné)```.
