@@ -16,6 +16,9 @@ Následující definice vychází z knihy [A Tour of C++](https://www.stroustrup
 - **Objekt** je paměť, která na dané **adrese** uchovává hodnotu daného typu.
 - Proměnná je **pojmenovaný objekt**.
 - S objektem v paměti můžu v jazce C pracovat i jen **s pomocí jeho adresy**, nemusí být pojmenovaný.
+
+V následujícíh bodech je použitý pseudokód pro lepší pochopení typu ukazatel, adresního operátoru (operátoru reference) a operátoru indirekce (operátoru dereference).
+
 - Ukazatel je proměnná která uchovává adresu objektu daného typu.
 - Typ ```adresa_objektu```, kde uvádíme typ objektu, naříklad  ```adresa_objektu_int```. 
 - Operátor ```adresa_objektu(název proměnné)```.
