@@ -7,7 +7,7 @@ TODO
 
 ## Ukazatele
 
-### Proměnné, typy a ukazatel
+### Definice
 
 Následující definice vychází z knihy [A Tour of C++](https://www.stroustrup.com/tour3.html).
 
@@ -19,6 +19,8 @@ Následující definice vychází z knihy [A Tour of C++](https://www.stroustrup
 
 S pomocí ukazatele můžeme pracovat s objektem jen s pomocí jeho adresy a daného typu.
 
+### Příklad
+
 V následujícíh bodech je použitý pseudokód pro lepší pochopení typu ukazatel, adresního operátoru (operátoru reference) a operátoru indirekce (operátoru dereference).
 
 - Typ ```typ_adresa_objektu```, kde uvádíme daný typ objektu, naříklad  ```typ_adresa_int_objektu```. 
@@ -27,7 +29,7 @@ V následujícíh bodech je použitý pseudokód pro lepší pochopení typu uka
 
 Poznámka: v předcházejících bodech je uveden pseudokód pro typ ukazatele.
 
-Příklad v pseudokódu pro vysvětlení typů a operátorů.
+**Příklad v pseudokódu pro vysvětlení typů a operátorů**
 
 ```c
 void vynuluj(typ_adresa_int_objektu p)
@@ -44,7 +46,7 @@ int main()
 }
 ```
 
-Reálný příklad v jazyce C.
+**Reálný příklad v jazyce C**
 
 ```c
 void vynuluj(int* p)
@@ -60,11 +62,14 @@ int main()
 	return 0;
 }
 ```
-| Pseudokód | Reálný kód |
-|---|---|
-| typ_adresa_int_objektu | int* |
-| hodnota_na_adrese(p) | *p |
-| adresa_promenne(x) | &x |
+
+**Tabulka srovnávající pseudokód s reálným zápisem**
+
+| Pseudokód | Reálný kód | Název |
+|---|---|---|
+| typ_adresa_int_objektu | int* | ukazatel | 
+| hodnota_na_adrese(p) | *p | adresní operátor nebo také operátor reference |
+| adresa_promenne(x) | &x | operártor indirekce nebo také operátor dereference |
 
 ## Obsah prvního týdne programátorské přípravky
 
