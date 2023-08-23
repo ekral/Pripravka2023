@@ -7,10 +7,13 @@ TODO
 
 ## Ukazatele
 
-- **Hodnota** jsou data v paměti s přiřazeným **typem** a **adresou**.
-- **Pojmenovaná hodnota** v paměti je **proměnná**.
-- S hodnotou v paměti můžu pracovat i jen **s pomocí její adresy**, nemusím být pojmenovaná.
-- Typ proměnné ```adresa_hodnoty```, kde uvádíme typ hodnoty, naříklad  ```adresa_hodnoty_int```. 
+### Proměnné a typy
+- **Typ** definuje množinu možných hodnot a množinu operací pro objekt.
+- **Hodnota** je množina bitů interpretovaná podle typu.
+- **Objekt** je paměť, která na dané **adrese** uchovává hodnotu konkrétního typ.
+- Proměnná je **Pojmenovaný objekt**.
+- S objektem v paměti můžu pracovat i jen **s pomocí jeho adresy**, nemusím být pojmenovaný.
+- Typ  ```adresa_objektu```, kde uvádíme typ objektu, naříklad  ```adresa_objektu_int```. 
 - Operátor ```adresa_promenne(název proměnné)```.
 - Operátor ```hodnota_na_adrese(adresa)```.
   
