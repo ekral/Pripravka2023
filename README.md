@@ -1,5 +1,10 @@
 # Letní programátorská přípravka 2023
 
+TODO
+- Ve čtvrtek ráno zopakovat ukazatele.
+- Potom ve čtvrtek odpoledne projit struktury.
+- V pátek zopakovat co dělalo studentům největší problémy.
+  
 ## Obsah prvního týdne programátorské přípravky
 
 - Obsah prvního týdne programátorské přípravky: [github.com/tdulik/pripravka2023](https://github.com/tdulik/pripravka2023)
