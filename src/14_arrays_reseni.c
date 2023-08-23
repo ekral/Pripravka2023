@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdbool.h>
 
-bool arrayEqual(char original[], char kopie[], char pocetZnaku)
+bool arrayEqual(char* original, char* kopie, char pocetZnaku)
 {
     assert(pocetZnaku > 0);
     
@@ -23,9 +23,19 @@ bool arrayEqual(char original[], char kopie[], char pocetZnaku)
     return true;
 }
 
-void copyArray(char poleA[], char poleB[], char pocetZnaku)
+void copyArray(char* poleA, char* poleB, char pocetZnaku)
 {
     // 2. zkopiruje originalni pole do kopie
+    
+    for(int i = 0; i != pocetZnaku; i++)
+    {
+        poleA[i] = *(poleB + i);
+    }
+}
+
+void vypis(char* pole, char pocetZnaku)
+{
+    
 }
 
 int main()
@@ -46,11 +56,12 @@ int main()
     
     char kopie[5];
     
-    assert(arrayEqual(poleE, kopie, 5));
-    
     copyArray(poleE, kopie, 5);
     
     assert(arrayEqual(poleE, kopie, 5));
+    
+    vypis(poleE);
+    vypis(kopie);
     
     return 0;
 }
