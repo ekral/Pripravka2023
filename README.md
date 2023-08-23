@@ -9,7 +9,7 @@ TODO
 
 ### Proměnné, typy a ukazatel
 
-Následující definice vychází z knihy [A Tour of C++)](https://www.stroustrup.com/tour3.html).
+Následující definice vychází z knihy [A Tour of C++](https://www.stroustrup.com/tour3.html).
 
 - **Typ** definuje množinu možných hodnot a množinu operací pro objekt.
 - **Hodnota** je množina bitů interpretovaná podle daného typu.
