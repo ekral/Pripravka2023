@@ -60,6 +60,11 @@ int main()
 	return 0;
 }
 ```
+| Pseudokód | Reálný kód |
+|---|---|
+| typ_adresa_int_objektu | int* |
+| hodnota_na_adrese(p) | *p |
+| adresa_promenne(x) | &x |
 
 ## Obsah prvního týdne programátorské přípravky
 
