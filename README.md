@@ -21,7 +21,6 @@ S pomocí ukazatele můžeme pracovat s objektem jen s pomocí jeho adresy a dan
 
 V následujícíh bodech je použitý pseudokód pro lepší pochopení typu ukazatel, adresního operátoru (operátoru reference) a operátoru indirekce (operátoru dereference).
 
-- Ukazatel je proměnná která uchovává adresu objektu daného typu.
 - Typ ```adresa_objektu```, kde uvádíme typ objektu, naříklad  ```adresa_objektu_int```. 
 - Operátor ```adresa_objektu(název proměnné)```.
 - Operátor ```hodnota_na_adrese(adresa)```.
