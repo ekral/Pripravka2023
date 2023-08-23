@@ -1,20 +1,20 @@
 #include <assert.h>
 #include <stdbool.h>
 
-bool arrayEqual(char* original, char* kopie, char pocetZnaku)
+bool arrayEqual(const char* poleA, const char* poleB, char pocetZnaku)
 {
     assert(pocetZnaku > 0);
     
     // testuji, zda zacinaji na stejne adrese
-    if(original == kopie)
+    if(poleA == poleB)
     {
         return true;
     }
     
     // testuji zda maji stejne hodnoty
-    for(int i = 0; i <= pocetZnaku; i++)
+    for(int i = 0; i < pocetZnaku; i++)
     {
-        if(original[i] != kopie[i])
+        if(poleA[i] != poleB[i])
         {
             return false;
         }
@@ -23,19 +23,25 @@ bool arrayEqual(char* original, char* kopie, char pocetZnaku)
     return true;
 }
 
-void copyArray(char* poleA, char* poleB, char pocetZnaku)
+void copyArray(char* original, char* kopie, char pocetZnaku)
 {
     // 2. zkopiruje originalni pole do kopie
     
-    for(int i = 0; i != pocetZnaku; i++)
+    for(int i = 0; i < pocetZnaku; i++)
     {
-        poleA[i] = *(poleB + i);
+        kopie[i] = *(original + i);
     }
 }
 
-void vypis(char* pole, char pocetZnaku)
+void vypis(char* const pole, char pocetZnaku)
 {
+    for(char* p = pole; p < (pole + pocetZnaku); p++)
+    {
+        char znak = *p;
+        putchar(znak);
+    }
     
+    putchar('\n');
 }
 
 int main()
@@ -51,6 +57,8 @@ int main()
     char poleE[5] = "ahoj";     // string initializations
     char poleF[] = "ahoj";      // string initializations
     
+    vypis(poleE, 5);
+    
     assert(arrayEqual(poleE, poleE, 5));
     assert(arrayEqual(poleE, poleF, 5));
     
@@ -58,10 +66,13 @@ int main()
     
     copyArray(poleE, kopie, 5);
     
+    vypis(poleE, 5);
+    vypis(kopie, 5);
+    
+    assert(arrayEqual(kopie, "ahoj",5));
     assert(arrayEqual(poleE, kopie, 5));
     
-    vypis(poleE);
-    vypis(kopie);
+    
     
     return 0;
 }
