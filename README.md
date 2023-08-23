@@ -4,6 +4,15 @@ TODO
 - Ve čtvrtek ráno zopakovat ukazatele.
 - Potom ve čtvrtek odpoledne projit struktury.
 - V pátek zopakovat co dělalo studentům největší problémy.
+
+## Ukazatele
+
+- Proměnná je **pojmenovaná hodnota v paměti**.
+- **Hodnota** má přiřazený **typ**.
+- Princip **adresy** na kterou můžu zapisovat do paměti.
+- Typ proměnné ```adresa_hodnoty```, kde uvádíme typ hodnoty, naříklad  ```adresa_hodnoty_int```. 
+- Operátor ```adresa_promenne(název proměnné)```.
+- Operátor ```hodnota_na_adrese(adressa)```.
   
 ## Obsah prvního týdne programátorské přípravky
 
