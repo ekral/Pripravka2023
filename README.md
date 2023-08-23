@@ -7,10 +7,9 @@ TODO
 
 ## Ukazatele
 
-- **Hodnota** je místo v paměti s přiřazeným **typem** a **adresou**.
+- **Hodnota** jsou data v paměti s přiřazeným **typem** a **adresou**.
 - **Pojmenovaná hodnota** v paměti je **proměnná**.
 - S hodnotou v paměti můžu pracovat i jen **s pomocí její adresy**, nemusím být pojmenovaná.
-- Princip **adresy** na kterou můžu zapisovat do paměti.
 - Typ proměnné ```adresa_hodnoty```, kde uvádíme typ hodnoty, naříklad  ```adresa_hodnoty_int```. 
 - Operátor ```adresa_promenne(název proměnné)```.
 - Operátor ```hodnota_na_adrese(adresa)```.
