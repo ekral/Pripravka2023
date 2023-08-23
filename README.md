@@ -23,7 +23,7 @@ S pomocí ukazatele můžeme pracovat s jakýmkoliv objektem v paměti, pokud zn
 
 V následujícíh příkladu je použitý pseudokód nahrazující operátory textem s cílem aby byl kód lépe pochopitelný. Dále je uvedený příklad ve validním kódu jazyka C a nakonec je uvedena tabulka pro srovnání.
 
-**Typy a operátory**
+**Typ a operátory**
 
 - Typ ```typ_adresa_objektu```, kde uvádíme daný typ objektu, naříklad  ```typ_adresa_int_objektu```. 
 - Operátor ```adresa_promenne(název proměnné)``` vrací adresu proměnné.
