@@ -11,7 +11,7 @@ TODO
 
 Následující definice vychází z knihy [A Tour of C++](https://www.stroustrup.com/tour3.html).
 
-- **Typ** definuje množinu možných hodnot a množinu operací pro objekt.
+- **Typ** definuje množinu možných hodnot a množinu operací (pro objekt).
 - **Hodnota** je množina bitů interpretovaná podle daného typu.
 - **Objekt** je paměť, která na dané **adrese** uchovává hodnotu daného typ.
 - Proměnná je **Pojmenovaný objekt**.
