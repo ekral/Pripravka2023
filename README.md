@@ -29,9 +29,20 @@ Poznámka: v předcházejících bodech je uveden pseudokód pro typ ukazatele.
 
 Příklad v pseudokódu pro vysvětlení typů a operátorů.
 
-```
 
-```
+	void vynuluj(typ_adresa_objektu_int p)
+	{
+		hodnota_na_adrese(p) = 0;
+	}
+	
+	int main()
+	{
+		int x = 2;
+		vynuluj(adresa_promenne(x));
+	
+		return 0;
+	}
+
 
 Reálný příklad v jazyce C.
 
