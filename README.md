@@ -2,7 +2,7 @@
 
 TODO
 - Detekce stisku kláves na windows: Příklad na podmíněný příklad if, cyklus do-while, switch.
-- Vykresleni přímky: Příklad na cyklus for, aritmetické operace, podmíněný příkaz if.
+- Vykreslení přímky: Příklad na cyklus for, aritmetické operace, podmíněný příkaz if.
 - Camera projection, 3D na 2D: Příklad na strukturu, funkci a aritmetické operace.
 
 ## Ukazatele
