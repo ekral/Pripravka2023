@@ -1,9 +1,13 @@
 # Letní programátorská přípravka 2023
 
-TODO
+základní témata na pátek
 - Detekce stisku kláves na windows: Příklad na podmíněný příklad if, cyklus do-while, switch.
 - Vykreslení přímky: Příklad na cyklus for, aritmetické operace, podmíněný příkaz if.
 - Camera projection, 3D na 2D: Příklad na strukturu, funkci a aritmetické operace.
+
+Pokročilá témata na pátek
+- matice pomocí ukazatelú na ukazatele, pole řetězců.
+- Ukazatele na funkce, trojuhelnik, ctverec, polymorfismus.
 
 ## Ukazatele
 
