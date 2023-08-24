@@ -1,11 +1,9 @@
 # Letní programátorská přípravka 2023
 
 TODO
-- V pátek dopoledne opakovani.
-- Odpoledne
-	- Detekce stisku kláves na windows.
-	- Vykresleni přímky.
-	- Camera projection, 3D na 2D
+- Detekce stisku kláves na windows: Příklad na podmíněný příklad if, cyklus do-while, switch.
+- Vykresleni přímky: Příklad na cyklus for, aritmetické operace, podmíněný příkaz if.
+- Camera projection, 3D na 2D: Příklad na strukturu, funkci a aritmetické operace.
 
 ## Ukazatele
 
