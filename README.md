@@ -1,9 +1,11 @@
 # Letní programátorská přípravka 2023
 
 TODO
-- Ve čtvrtek ráno zopakovat ukazatele.
-- Potom ve čtvrtek odpoledne projit struktury.
-- V pátek zopakovat co dělalo studentům největší problémy.
+- V pátek dopoledne opakovani.
+- Odpoledne
+	- Detekce stisku kláves na windows.
+	- Vykresleni přímky.
+	- Camera projection, 3D na 2D
 
 ## Ukazatele
 
