@@ -25,9 +25,9 @@ void matice_init(struct Matice* matice, int max_x, int max_y, char znak)
 
 void matice_vypis(struct Matice* matice)
 {
-    for(int i = 0; i < matice.pocetRadku)
+    for(int i = 0; i < matice->pocetRadku)
     {
-        for(int j = 0; j < matice.pocetSloupcu)
+        for(int j = 0; j < matice->pocetSloupcu)
         {
             putchar(matice[i]);
         }
