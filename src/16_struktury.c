@@ -19,17 +19,17 @@ void matice_init(struct Matice* matice, int max_x, int max_y, char znak)
     
     for(int i = 0; i < pocetPrvku; i++)
     {
-        matice.data[i] = znak;
+        matice->data[i] = znak;
     }
 }
 
 void matice_vypis(struct Matice* matice)
 {
-    for(int i = 0; i < matice->pocetRadku)
+    for(int i = 0; i < matice->pocetRadku; i++)
     {
-        for(int j = 0; j < matice->pocetSloupcu)
+        for(int j = 0; j < matice->pocetSloupcu; j++)
         {
-            putchar(matice[i]);
+            putchar(matice->data[i]);
         }
         
         putchar('\n');
@@ -45,15 +45,14 @@ void matice_free(struct Matice* matice)
 int main()
 {
     int max_x = 50;
-    int max_y = 20;
+    int max_y = 10;
     
     struct Matice matice;
     matice_init(&matice, max_x, max_y, 'x');
     
-    assert(matice.pocetRadku == max_x);
-    assert(matice.pocetSloupcu == max_y);
+    matice_vypis(&matice);
     
-    matice_free(&matice_free);
+    matice_free(&matice);
     
 	return 0;
 }
