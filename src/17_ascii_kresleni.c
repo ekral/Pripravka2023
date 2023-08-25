@@ -18,12 +18,14 @@ struct Matice
 bool try_matice_init(struct Matice* matice, int max_x, int max_y, char pozadi, char popredi)
 { 
     int pocetPrvku = max_x * max_y;
-    matice->data = malloc(pocetPrvku * sizeof(char)) == NULL;
+    matice->data = malloc(pocetPrvku * sizeof(char));
     
     if(matice->data == NULL)
     {
         return false;
     } 
+    
+    return true;
 }
 
 // Pokud je normalni stav, ze pamet bude, nekolik kilobajtu musi mit OS vzdy k dispozici
