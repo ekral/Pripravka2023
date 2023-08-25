@@ -82,6 +82,9 @@ void matice_vypis(struct Matice* matice)
 
 void matice_nakresli_bod(struct Matice* matice, int x, int y)
 {
+    assert(x > 0 && x < matice->pocetSloupcu);
+    assert(y > 0 && y < matice->pocetRadku);
+    
     int pos = x + (y * matice->pocetSloupcu);
     matice->data[pos] = matice->popredi;
 }
@@ -91,7 +94,7 @@ int main()
     int max_x = 50;
     int max_y = 10;
     
-    char pozadi = 'x';
+    char pozadi = '-';
     char popredi = 'o';
     
     struct Matice matice;
@@ -116,14 +119,25 @@ int main()
      
         int znak = _getch(); // Jen pro windows
         
-        if(znak == 'q')
+        switch(znak)
         {
-            konec = true;
+            case 'q':
+                konec = true;
+                break;
+            case 'd':
+                ++x;
+                break;
+            case 'a':
+                --x;
+                break;
+            case 'w':
+                --y;
+                break;
+            case 's':
+                ++y;
+                break;
         }
-        else if(znak == 'd')
-        {
-            ++x;
-        }
+       
         
     } while(!konec);
     
