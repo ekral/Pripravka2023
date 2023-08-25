@@ -144,7 +144,9 @@ void ctverec_nakresli(struct Ctverec* ctverec, struct Platno* platno)
 
 void trojuhelnik_nakresli(struct Trojuhelnik* trojuhelnik, struct Platno* platno)
 {
-    // TODO nakreslit rojuhelnik 
+    platno_nakresli_usecku(platno, trojuhelnik->bodA, trojuhelnik->bodB );
+    platno_nakresli_usecku(platno, trojuhelnik->bodB, trojuhelnik->bodC );
+    platno_nakresli_usecku(platno, trojuhelnik->bodA, trojuhelnik->bodC );
 }
 
 int main()
@@ -184,7 +186,7 @@ int main()
         struct Bod2D bodA = { 1, 2 };
         struct Bod2D bodB = { 5, 6 };
         
-        platno_nakresli_usecku(&platno, bodA, bodB);
+        //platno_nakresli_usecku(&platno, bodA, bodB);
         
         platno_nakresli_bod(&platno, x, y); // nakresli pod znakem popredi
 
