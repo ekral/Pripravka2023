@@ -34,7 +34,7 @@ struct Trojuhelnik
     struct Bod2D bodC;
 };
 
-void Ctverec_nakresli(struct Ctverec* ctverec, struct Platno* platno)
+void ctverec_nakresli(struct Ctverec* ctverec, struct Platno* platno)
 {
     // TODO nakreslit ctverec
 }
@@ -163,6 +163,9 @@ int main()
     
     bool konec = false;
     
+    struct Ctverec c1 = { (struct Bod2D) { 4, 7 }, 5 };
+    struct Trojuhelnik t1 = { (struct Bod2D){ 0, 0 }, (struct Bod2D){ 0, 0 }, (struct Bod2D){ 0, 0 }};
+    
     do
     {
         platno_vymaz(&platno); // nastavi znaky na pozadi
@@ -173,12 +176,17 @@ int main()
         platno.popredi = '1';
         platno_nakresli_bod(&platno, platno.pocetSloupcu - 1, platno.pocetRadku - 1);
         
+        platno.popredi = popredi;
+        
+        trojuhelnik_nakresli(&t1, &platno);
+        ctverec_nakresli(&c1, &platno);
+        
         struct Bod2D bodA = { 1, 2 };
         struct Bod2D bodB = { 5, 6 };
         
         platno_nakresli_usecku(&platno, bodA, bodB);
         
-        platno.popredi = popredi;
+        
         platno_nakresli_bod(&platno, x, y); // nakresli pod znakem popredi
 
         COORD pos = {0, 0};
