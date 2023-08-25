@@ -4,8 +4,9 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <Windows.h>
+#include <math.h>
 
-struct Matice
+struct Platno
 {
     char* data;
     int pocetRadku;
@@ -14,13 +15,42 @@ struct Matice
     char popredi;
 };
 
+struct Bod2D
+{
+    int x;
+    int y;
+};
+
+struct Ctverec
+{
+    struct Bod2D stred;
+    int delkaStrany;
+};
+
+struct Trojuhelnik
+{
+    struct Bod2D bodA;
+    struct Bod2D bodB;
+    struct Bod2D bodC;
+};
+
+void Ctverec_nakresli(struct Ctverec* ctverec, struct Platno* platno)
+{
+    // TODO nakreslit ctverec
+}
+
+void trojuhelnik_nakresli(struct Trojuhelnik* trojuhelnik, struct Platno* platno)
+{
+    // TODO nakreslit rojuhelnik 
+}
+
 // Pokud je normalni stav, ze nebude dostatek pameti, napriklad ze matice bezne zabira nekolk GB pameti
-bool try_matice_init(struct Matice* matice, int max_x, int max_y, char pozadi, char popredi)
+bool try_matice_init(struct Platno* platno, int max_x, int max_y, char pozadi, char popredi)
 { 
     int pocetPrvku = max_x * max_y;
-    matice->data = malloc(pocetPrvku * sizeof(char));
+    platno->data = malloc(pocetPrvku * sizeof(char));
     
-    if(matice->data == NULL)
+    if(platno->data == NULL)
     {
         return false;
     } 
@@ -29,49 +59,49 @@ bool try_matice_init(struct Matice* matice, int max_x, int max_y, char pozadi, c
 }
 
 // Pokud je normalni stav, ze pamet bude, nekolik kilobajtu musi mit OS vzdy k dispozici
-void matice_init(struct Matice* matice, int max_x, int max_y, char pozadi, char popredi)
+void platno_init(struct Platno* platno, int max_x, int max_y, char pozadi, char popredi)
 {       
     int pocetPrvku = max_x * max_y;
     assert(max_x > 0);
     assert(max_y > 0);
     
-    matice->data = malloc(pocetPrvku * sizeof(char));
+    platno->data = malloc(pocetPrvku * sizeof(char));
     
-    if(matice->data == NULL)
+    if(platno->data == NULL)
     {
         exit(EXIT_FAILURE);
     } 
     
-    matice->pocetRadku = max_y; 
-    matice->pocetSloupcu = max_x;
-    matice->pozadi = pozadi;
-    matice->popredi = popredi;
+    platno->pocetRadku = max_y; 
+    platno->pocetSloupcu = max_x;
+    platno->pozadi = pozadi;
+    platno->popredi = popredi;
 }
 
-void matice_free(struct Matice* matice)
+void platno_free(struct Platno* platno)
 {
-    free(matice->data);
-    matice->data = NULL;
+    free(platno->data);
+    platno->data = NULL;
 }
 
-void matice_vymaz(struct Matice* matice)
+void platno_vymaz(struct Platno* platno)
 {
-    int pocetPrvku = matice->pocetRadku * matice->pocetSloupcu;
+    int pocetPrvku = platno->pocetRadku * platno->pocetSloupcu;
     
     for(int i = 0; i < pocetPrvku; i++)
     {
-        matice->data[i] = matice->pozadi;
+        platno->data[i] = platno->pozadi;
     }
 }
 
-void matice_vypis(struct Matice* matice)
+void platno_vypis(struct Platno* platno)
 {
     int pos = 0;
-    for(int i = 0; i < matice->pocetRadku; i++)
+    for(int i = 0; i < platno->pocetRadku; i++)
     {
-        for(int j = 0; j < matice->pocetSloupcu; j++)
+        for(int j = 0; j < platno->pocetSloupcu; j++)
         {
-            char znak = matice->data[pos];
+            char znak = platno->data[pos];
             putchar(znak);
             ++pos;
         }
@@ -80,13 +110,41 @@ void matice_vypis(struct Matice* matice)
     }
 }
 
-void matice_nakresli_bod(struct Matice* matice, int x, int y)
+void platno_nakresli_bod(struct Platno* platno, int x, int y)
 {
-    assert(x > 0 && x < matice->pocetSloupcu);
-    assert(y > 0 && y < matice->pocetRadku);
+    assert(x >= 0 && x < platno->pocetSloupcu);
+    assert(y >= 0 && y < platno->pocetRadku);
     
-    int pos = x + (y * matice->pocetSloupcu);
-    matice->data[pos] = matice->popredi;
+    int pos = x + ((platno->pocetRadku - y - 1) * platno->pocetSloupcu); // PREDELAT
+    platno->data[pos] = platno->popredi;
+}
+
+void platno_nakresli_usecku(struct Platno* platno, struct Bod2D bodA, struct Bod2D bodB)
+{
+    // zvoleny vypocet neni optimalni, ale jednoduchy
+    
+    double dx = (double)(bodB.x - bodA.x);
+    double dy = (double)(bodB.y - bodA.y);
+    
+    // najit vetsi, pozor na zaporne hodnoty, asi budu porovnat absolutni
+    // double max = abs(dx) > abs(dy) ? abs(dx) : abs(dy)
+    double max = fmax(abs(dx), abs(dy));
+    
+    double step_x = dx / max;
+    double step_y = dy / max;
+    
+    double x = bodA.x;
+    double y = bodA.y;
+    
+    int max_i = (int)max;
+    
+    for(int i = 0; i < max_i; ++i)
+    {
+        platno_nakresli_bod(platno, x, y);
+        
+        x += step_x;
+        y += step_y;
+    }
 }
 
 int main()
@@ -97,8 +155,8 @@ int main()
     char pozadi = '-';
     char popredi = 'o';
     
-    struct Matice matice;
-    matice_init(&matice, max_x, max_y, pozadi, popredi); // init nebude mazat
+    struct Platno platno;
+    platno_init(&platno, max_x, max_y, pozadi, popredi); // init nebude mazat
     
     int x = 7;
     int y = 5;
@@ -107,15 +165,27 @@ int main()
     
     do
     {
-        matice_vymaz(&matice); // nastavi znaky na pozadi
+        platno_vymaz(&platno); // nastavi znaky na pozadi
         
-        matice_nakresli_bod(&matice, x, y); // nakresli pod znakem popredi
+        platno.popredi = 'O';
+        platno_nakresli_bod(&platno, 0, 0);
+        
+        platno.popredi = '1';
+        platno_nakresli_bod(&platno, platno.pocetSloupcu - 1, platno.pocetRadku - 1);
+        
+        struct Bod2D bodA = { 1, 2 };
+        struct Bod2D bodB = { 5, 6 };
+        
+        platno_nakresli_usecku(&platno, bodA, bodB);
+        
+        platno.popredi = popredi;
+        platno_nakresli_bod(&platno, x, y); // nakresli pod znakem popredi
 
         COORD pos = {0, 0};
         HANDLE output = GetStdHandle(STD_OUTPUT_HANDLE);
         SetConsoleCursorPosition(output, pos);
         
-        matice_vypis(&matice);
+        platno_vypis(&platno);
      
         int znak = _getch(); // Jen pro windows
         
@@ -141,7 +211,7 @@ int main()
         
     } while(!konec);
     
-    matice_free(&matice);
+    platno_free(&platno);
     
 	return 0;
 }
