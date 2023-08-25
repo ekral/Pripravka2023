@@ -139,7 +139,19 @@ void platno_nakresli_usecku(struct Platno* platno, struct Bod2D bodA, struct Bod
 
 void ctverec_nakresli(struct Ctverec* ctverec, struct Platno* platno)
 {
-    // TODO nakreslit ctverec
+    int x = ctverec->stred.x; 
+    int y = ctverec->stred.y;
+    int polovina_n = n / 2;
+    
+    struct Bod2D bodA = { x - polovina_n, y - polovina_n };
+    struct Bod2D bodB = { x + polovina_n, y - polovina_n };
+    struct Bod2D bodC = { x + polovina_n, y + polovina_n };
+    struct Bod2D bodD = { x - polovina_n, y + polovina_n };
+    
+    platno_nakresli_usecku(platno, bodA, bodB);
+    platno_nakresli_usecku(platno, bodB, bodC);
+    platno_nakresli_usecku(platno, bodC, bodD);
+    platno_nakresli_usecku(platno, bodD, bodA);
 }
 
 void trojuhelnik_nakresli(struct Trojuhelnik* trojuhelnik, struct Platno* platno)
