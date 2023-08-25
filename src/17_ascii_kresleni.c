@@ -164,7 +164,7 @@ int main()
     bool konec = false;
     
     struct Ctverec c1 = { (struct Bod2D) { 4, 7 }, 5 };
-    struct Trojuhelnik t1 = { (struct Bod2D){ 0, 0 }, (struct Bod2D){ 0, 0 }, (struct Bod2D){ 0, 0 }};
+    struct Trojuhelnik t1 = { (struct Bod2D){ 2, 2 }, (struct Bod2D){ 5, 2 }, (struct Bod2D){ 5, 7 }};
     
     do
     {
@@ -185,7 +185,6 @@ int main()
         struct Bod2D bodB = { 5, 6 };
         
         platno_nakresli_usecku(&platno, bodA, bodB);
-        
         
         platno_nakresli_bod(&platno, x, y); // nakresli pod znakem popredi
 
