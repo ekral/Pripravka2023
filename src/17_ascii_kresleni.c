@@ -71,7 +71,8 @@ void matice_vypis(struct Matice* matice)
     {
         for(int j = 0; j < matice->pocetSloupcu; j++)
         {
-            putchar(matice->data[pos]);
+            char znak = matice->data[pos];
+            putchar(znak);
             ++pos;
         }
         
