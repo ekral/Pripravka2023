@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include <math.h>
 
+// header file 
 struct Platno
 {
     char* data;
@@ -41,6 +42,21 @@ struct Trojuhelnik
     struct Bod2D bodB;
     struct Bod2D bodC;
 };
+
+// Pridat Kruznici
+
+bool try_matice_init(struct Platno* platno, int max_x, int max_y, char pozadi, char popredi);
+void platno_init(struct Platno* platno, int max_x, int max_y, char pozadi, char popredi);
+void platno_init(struct Platno* platno, int max_x, int max_y, char pozadi, char popredi);
+void platno_free(struct Platno* platno);
+void platno_vymaz(struct Platno* platno);
+void platno_vypis(struct Platno* platno);
+void platno_nakresli_bod(struct Platno* platno, int x, int y);
+void platno_nakresli_usecku(struct Platno* platno, struct Bod2D bodA, struct Bod2D bodB);
+void ctverec_nakresli(struct GrafickyObjekt* objekt, struct Platno* platno);
+void trojuhelnik_nakresli(struct GrafickyObjekt* objekt, struct Platno* platno);
+
+// cpp file
 
 // Pokud je normalni stav, ze nebude dostatek pameti, napriklad ze matice bezne zabira nekolk GB pameti
 bool try_matice_init(struct Platno* platno, int max_x, int max_y, char pozadi, char popredi)
@@ -148,6 +164,7 @@ void platno_nakresli_usecku(struct Platno* platno, struct Bod2D bodA, struct Bod
 void ctverec_nakresli(struct GrafickyObjekt* objekt, struct Platno* platno)
 {
     struct Ctverec* ctverec = (struct Ctverec*)objekt;
+    
     int x = ctverec->stred.x; 
     int y = ctverec->stred.y;
     int n = ctverec->delkaStrany;
@@ -167,13 +184,34 @@ void ctverec_nakresli(struct GrafickyObjekt* objekt, struct Platno* platno)
 void trojuhelnik_nakresli(struct GrafickyObjekt* objekt, struct Platno* platno)
 {
     struct Trojuhelnik* trojuhelnik = (struct Trojuhelnik*)objekt;
+    
     platno_nakresli_usecku(platno, trojuhelnik->bodA, trojuhelnik->bodB );
     platno_nakresli_usecku(platno, trojuhelnik->bodB, trojuhelnik->bodC );
     platno_nakresli_usecku(platno, trojuhelnik->bodA, trojuhelnik->bodC );
 }
 
+int secti(int a, int b)
+{
+    return a + b;
+}
+
+int odecti(int a, int b)
+{
+    return a + b;
+}
+
 int main()
-{    
+{
+    int (*funkce)(int a, int b);
+    funkce = secti;
+    
+    int vysledek;
+    
+    vysledek = funkce(2, 3);
+    
+    funkce = odecti;
+    vysledek = funkce(2, 3);
+    
     int max_x = 50;
     int max_y = 10;
     
@@ -191,9 +229,12 @@ int main()
     struct Ctverec c1 = { (struct GrafickyObjekt) { "ctverec 1", ctverec_nakresli}, (struct Bod2D) { 18, 7 }, 5 };
     struct Trojuhelnik t1 = { (struct GrafickyObjekt) { "trojuhelnik 1", trojuhelnik_nakresli}, (struct Bod2D){ 2, 2 }, (struct Bod2D){ 12, 2 }, (struct Bod2D){ 12, 7 }};
     
-    int pocetObjektu = 2;
-    struct GrafickyObjekt* poleObjektu[] = { (struct GrafickyObjekt*)&c1, (struct GrafickyObjekt*)&t1 };
+    // pridat kruznici
     
+    int pocetObjektu = 2;
+    struct GrafickyObjekt* objekty[] = { (struct GrafickyObjekt*)&c1, (struct GrafickyObjekt*)&t1};
+    
+
     do
     {
         platno_vymaz(&platno); // nastavi znaky na pozadi
@@ -206,7 +247,7 @@ int main()
         
         platno.popredi = popredi;
         
-        for(struct GrafickyObjekt** p = &poleObjektu[0]; p < poleObjektu + pocetObjektu; p++)
+        for(struct GrafickyObjekt** p = &objekty[0]; p < &objekty[0] + pocetObjektu; p++)
         {
            (*p)->funkce_nakresli(*p, &platno);
         }
