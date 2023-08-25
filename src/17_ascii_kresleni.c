@@ -34,16 +34,6 @@ struct Trojuhelnik
     struct Bod2D bodC;
 };
 
-void ctverec_nakresli(struct Ctverec* ctverec, struct Platno* platno)
-{
-    // TODO nakreslit ctverec
-}
-
-void trojuhelnik_nakresli(struct Trojuhelnik* trojuhelnik, struct Platno* platno)
-{
-    // TODO nakreslit rojuhelnik 
-}
-
 // Pokud je normalni stav, ze nebude dostatek pameti, napriklad ze matice bezne zabira nekolk GB pameti
 bool try_matice_init(struct Platno* platno, int max_x, int max_y, char pozadi, char popredi)
 { 
@@ -145,6 +135,16 @@ void platno_nakresli_usecku(struct Platno* platno, struct Bod2D bodA, struct Bod
         x += step_x;
         y += step_y;
     }
+}
+
+void ctverec_nakresli(struct Ctverec* ctverec, struct Platno* platno)
+{
+    // TODO nakreslit ctverec
+}
+
+void trojuhelnik_nakresli(struct Trojuhelnik* trojuhelnik, struct Platno* platno)
+{
+    // TODO nakreslit rojuhelnik 
 }
 
 int main()
