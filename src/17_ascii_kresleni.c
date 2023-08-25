@@ -126,11 +126,11 @@ void platno_nakresli_usecku(struct Platno* platno, struct Bod2D bodA, struct Bod
     double x = bodA.x;
     double y = bodA.y;
     
-    int max_i = (int)max;
+    int max_i = (int)round(max);
     
-    for(int i = 0; i < max_i; ++i)
+    for(int i = 0; i <= max_i; ++i)
     {
-        platno_nakresli_bod(platno, x, y);
+        platno_nakresli_bod(platno, (int)round(x), (int)round(y));
         
         x += step_x;
         y += step_y;
@@ -166,7 +166,7 @@ int main()
     bool konec = false;
     
     struct Ctverec c1 = { (struct Bod2D) { 4, 7 }, 5 };
-    struct Trojuhelnik t1 = { (struct Bod2D){ 2, 2 }, (struct Bod2D){ 5, 2 }, (struct Bod2D){ 5, 7 }};
+    struct Trojuhelnik t1 = { (struct Bod2D){ 2, 2 }, (struct Bod2D){ 12, 2 }, (struct Bod2D){ 12, 7 }};
     
     do
     {
