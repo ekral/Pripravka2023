@@ -73,8 +73,9 @@ int main()
 | Pseudokód | Reálný kód | Název |
 |---|---|---|
 | typ_adresa_int_objektu | int* | ukazatel | 
-| hodnota_na_adrese(p) | *p | adresní operátor nebo také operátor reference |
-| adresa_promenne(x) | &x | operártor indirekce nebo také operátor dereference |
+| adresa_promenne(x) | &x | adresní operátor nebo také operátor reference |
+| hodnota_na_adrese(p) | *p | operátor indirekce nebo také operátor dereference |
+
 
 ## Obsah prvního týdne programátorské přípravky
 
